@@ -7,7 +7,7 @@
         //var_dump($_GET);
         //1. Retrieve the id parameter from the url querystring
         if (  isset($_GET['id']) && is_numeric($_GET['id'])     ){
-            $id = $_GET['id'];
+            $catid = $_GET['id'];
             
             //2.  get the database configuration file
             require './includes/config.php';
@@ -23,7 +23,7 @@
             //  :id
             
             //Bind the parameter
-            $stmt->bindValue(':id',$id,PDO::PARAM_INT);
+            $stmt->bindValue(':id',$catid,PDO::PARAM_INT);
 
             //5.  Execute the query
             $stmt->execute();

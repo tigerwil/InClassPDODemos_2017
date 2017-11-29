@@ -42,7 +42,7 @@
             //7.Loop the array and display in ul list
             foreach ($category_list as $row){
                 echo "<li class='list-group-item'>
-                        <a href='articlesbycategory.php?id={$row['id']}'>{$row['category']}</a>
+                        <a href='articlesbycategory.php?id={$row['id']}&name={$row['category']}'>{$row['category']}</a>
                       </li>";
             }
             
