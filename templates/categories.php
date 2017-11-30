@@ -36,18 +36,29 @@
             
             //var_dump($category_list);
             //exit();
-            //start the list
-            echo "<ul class='list-group'>";
-            echo '<li class="list-group-item active">Select a Category</li>';
+            //start the table
+            echo "<table class='table table-bordered table-striped'>
+                     <thead class='thead-dark'>
+                        <tr>
+                            <th>Category</th>
+                            <th>Edit</th>
+                        </tr>
+                     </thead>
+                     <tbody>";
             //7.Loop the array and display in ul list
             foreach ($category_list as $row){
-                echo "<li class='list-group-item'>
-                        <a href='articlesbycategory.php?id={$row['id']}&name={$row['category']}'>{$row['category']}</a>
-                      </li>";
+                echo "<tr>
+                        <td><a href='articlesbycategory.php?id={$row['id']}&name={$row['category']}'>{$row['category']}</a></td>
+                        <td>                        
+                            <a href='editCategory.php?id={$row['id']}'  title='Edit {$row['category']}'>
+                                <i class='fa fa-pencil-square-o fa-2x'></i>
+                            </a>
+                        </td>
+                         
+                      </tr>";
             }
-            
-            //end the list
-            echo "</ul>"
+
+            //end the table
+            echo "</tbody></table>"
     ?>
-    </div>
-    
+    </div>    
