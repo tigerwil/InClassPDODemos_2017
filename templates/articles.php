@@ -37,7 +37,7 @@
         
         //8.  Loop and display the article pages in html table
         //start table 
-        echo "<table class='table table-striped table-bordered'>
+        echo "<table class='table table-striped table-bordered' id='article-table'>
                 <thead class='thead-dark'>
                     <tr>
                         <th>Title</th>
