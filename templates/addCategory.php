@@ -56,9 +56,12 @@
                 }//end of try catch block
                 
                 
+            }else{
+              //no value entered by user - show message
+                echo "<p>Category name is required!</p>";  
             }//end if not empty
         
-        } else{
+        } //else{
 
 
     ?>
@@ -76,7 +79,7 @@
     <?php
     
                 
-        }//IF POST 
+        //}//IF POST 
     ?>
         
 </div>
